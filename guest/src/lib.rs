@@ -2,6 +2,7 @@
 #![no_main]
 
 extern crate alloc;
+extern crate core;
 
 use scale_codec::Decode;
 
@@ -12,10 +13,10 @@ mod dcap;
 use primitive_io::{Inputs, Outputs};
 
 #[jolt::provable]
-fn dcap_verify(input: &Inputs) -> Outputs {
+fn dcap_verify(input: Inputs) -> Outputs {
     let now = input.now;
-    let raw_quote = &input.quote;
-    let raw_quote_collateral = &input.quote_collateral;
+    let raw_quote = input.quote;
+    let raw_quote_collateral = input.quote_collateral;
 
     let quote_collateral =
         dcap::SgxV30QuoteCollateral::decode(&mut raw_quote_collateral.as_slice()).unwrap();

@@ -23,7 +23,7 @@ pub fn main() {
     };
 
     print_current_time("prove start");
-    let (output, proof) = prove_dcap_verify(&input);
+    let (output, proof) = prove_dcap_verify(input);
     print_current_time("prove finished");
     println!("proof size: {:?}", proof.size());
 
