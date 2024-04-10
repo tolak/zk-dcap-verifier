@@ -9,6 +9,7 @@ path = "./src/lib.rs"
 
 [features]
 guest = []
+std = ["pink-json/std"]
 
 [dependencies]
 jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", default-features = false }

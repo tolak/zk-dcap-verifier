@@ -13,17 +13,13 @@ lto = "fat"
 
 [dependencies]
 jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", features = ["std"] }
-guest = { path = "./guest" }
+guest = { path = "./guest", features = ["std"] }
 primitive-io = { path = "./primitive-io" }
 
 hex = "0.4.3"
 chrono = { version = "0.4.31" }
-# pink-json = { version = "0.4", default-features = false } # serde_json isn't determinism
 
 [patch.crates-io]
 ark-ff = { git = "https://github.com/a16z/arkworks-algebra", branch = "optimize/field-from-u64" }
 ark-ec = { git = "https://github.com/a16z/arkworks-algebra", branch = "optimize/field-from-u64" }
 ark-serialize = { git = "https://github.com/a16z/arkworks-algebra", branch = "optimize/field-from-u64" }
-
-# [features]
-# std = ["pink-json/std"]
