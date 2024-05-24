@@ -12,7 +12,7 @@ codegen-units = 1
 lto = "fat"
 
 [dependencies]
-jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", features = ["std"] }
+jolt = { package = "jolt-sdk", git = "https://github.com/tolak/jolt", branch = "patched-input-size", features = ["host"] }
 guest = { path = "./guest", features = ["std"] }
 primitive-io = { path = "./primitive-io" }
 

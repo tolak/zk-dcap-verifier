@@ -12,7 +12,7 @@ guest = []
 std = ["pink-json/std"]
 
 [dependencies]
-jolt = { package = "jolt-sdk", git = "https://github.com/a16z/jolt", default-features = false }
+jolt = { package = "jolt-sdk", git = "https://github.com/tolak/jolt", branch = "patched-input-size", default-features = false }
 
 serde = { version = "1.0.197", default-features = false, features = ["alloc", "derive"] }
 # serde_json = { version = "1.0.107", default-features = false, features = ["alloc"] }
